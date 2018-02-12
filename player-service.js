@@ -50,7 +50,7 @@ function PlayerService(callback) {
         })
         callback(filteredPosition)
     }
-    this.getPlayersByName = function getPlayerByName(name, callback) {
+    this.getPlayersByName = function getPlayerByName(callback) {
         var filteredName = playersData.filter(function (player){
             if(player.firstname === name || player.lastname === name || player.fullname === name){
                 return true;
