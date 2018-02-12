@@ -16,17 +16,13 @@ function PlayerController(){
             player.position = player.position ? player.position : 'No Info Available'
             player.pro_team = player.pro_team ? player.pro_team : 'No Info Available'
             template += `
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
-                <div class="player-card">
-                    <div class="player-photo">
-                        <img src="${player.photo}">
-                    </div>
-                    <div class="player-info">
-                        <h2><b>Name:</b>${player.fullname}</h2>
-                        <h3><b>Team:</b>${player.pro_team}</h3>
-                        <h3><b>Position:</b>${player.position}</h3>
-                        <button type="button" class="btn btn-primary" onClick="app.controllers.playerController.addToTeam(${player.id})">Add To My Team!</button>
-                    </div>
+            <div class="col-sm-4">
+                <div class="card bg-secondary">
+                    <img src="${player.photo}" class="card-img-top">
+                    <h2><b>Name:</b>${player.fullname}</h2>
+                    <h3><b>Team:</b>${player.pro_team}</h3>
+                    <h3><b>Position:</b>${player.position}</h3>
+                    <button type="button" class="btn btn-primary" onClick="app.controllers.playerController.addToTeam(${player.id})">Add To Team!</button>
                 </div>
             </div>
             `
@@ -41,17 +37,13 @@ function PlayerController(){
             player.position = player.position ? player.position : 'No Info Available'
             player.pro_team = player.pro_team ? player.pro_team : 'No Info Available'
             template += `
-            <div class="col-md-4 col-sm-6 col-xs-12pt-3">
-                <div class="player-card">
-                    <div class="player-photo">
-                        <img src="${player.photo}">
-                    </div>
-                    <div class="player-info">
-                        <h2><b>Name:</b>${player.fullname}</h2>
-                        <h3><b>Team:</b>${player.pro_team}</h3>
-                        <h3><b>Position:</b>${player.position}</h3>
-                        <button type="button" class="btn btn-danger" onClick="app.controllers.playerController.removeFromTeam(${player.id})">Remove From Team</button>
-                    </div>
+            <div class="col-sm-4">
+                <div class="card bg-secondary">
+                    <img src="${player.photo}" class="card-img-top">
+                    <h2><b>Name:</b>${player.fullname}</h2>
+                    <h3><b>Team:</b>${player.pro_team}</h3>
+                    <h3><b>Position:</b>${player.position}</h3>
+                    <button type="button" class="btn btn-danger" onClick="app.controllers.playerController.removeFromTeam(${player.id})">Remove From Team</button>
                 </div>
             </div>
             `
@@ -74,7 +66,7 @@ function PlayerController(){
         var formData = event.target;
         var type = formData.type.value
         if(type == 'name'){
-            playerService.getPlayersByTeam(formData.search.value, drawPlayers)
+            playerService.getPlayersByName(formData.search.value, drawPlayers)
         }
         if(type == 'position'){
             playerService.getPlayersByPosition(formData.search.value, drawPlayers)

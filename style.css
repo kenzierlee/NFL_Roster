@@ -5,11 +5,12 @@ body {
 img {
     max-width: 250px
 }
-.player-card{
-    display: flex;
-    background: rgba(128, 127, 137, 0.75);
-    border-radius: 10px
+.card {
+    min-width: 22rem;
 }
 h1 {
     color: #FFF;
+    text-align: center;
+    background: rgba(128, 127, 137, 0.75);
+    border-radius: 10px
 }

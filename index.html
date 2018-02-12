@@ -21,16 +21,32 @@
                         <option value="name">Name:</option>
                         <option value="position">Postion:</option>
                     </select>
-                    <input type="text" class="search" placeholder="Search" name="search"/>
-                    <button class="sort btn btn-primary" type="submit">Search</button>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control search" placeholder="Search" name="search">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit button">Button</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <div class="row" id="player-results">
-            <h1>NFL Players:</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>My Team:</h1>
+            </div>
         </div>
-        <div class="row" id="my-team">
-            <h1>My Team:</h1>
+        <div class="row">
+            <div id="my-team" class="card-group">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>NFL Players:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="player-results" class="card-group">
+            </div>
         </div>
     </div>
 
