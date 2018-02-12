@@ -1,0 +1,15 @@
+body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/a/2/a/429842.jpg");
+    background-size: 100vw, 100vh
+}
+img {
+    max-width: 250px
+}
+.player-card{
+    display: flex;
+    background: rgba(128, 127, 137, 0.75);
+    border-radius: 10px
+}
+h1 {
+    color: #FFF;
+}
