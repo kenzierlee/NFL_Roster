@@ -44,15 +44,16 @@ function PlayerService(callback) {
     this.getPlayersByPosition = function getPlayerByPosition(position, callback) {
         var position = position.toUpperCase()
         var filteredPosition = playersData.filter(function (player) {
-            if (player.position === position) {
+            if (player.position == position) {
                 return true;
             }
         })
         callback(filteredPosition)
     }
-    this.getPlayersByName = function getPlayerByName(callback) {
+    this.getPlayersByName = function getPlayersByName(name,callback) {
+        var name = name
         var filteredName = playersData.filter(function (player){
-            if(player.firstname === name || player.lastname === name || player.fullname === name){
+            if(player.firstname == name || player.lastname == name){
                 return true;
             }
         })
