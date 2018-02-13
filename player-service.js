@@ -35,7 +35,7 @@ function PlayerService(callback) {
         // making all data the same
         var team = team.toUpperCase()
         var filteredTeam = playersData.filter(function (player) {
-            if (player.pro_team === team) {
+            if (player.pro_team == team) {
                 return true;
             }
         })
@@ -51,9 +51,9 @@ function PlayerService(callback) {
         callback(filteredPosition)
     }
     this.getPlayersByName = function getPlayersByName(name,callback) {
-        var name = name
+        var name = name.toUpperCase()
         var filteredName = playersData.filter(function (player){
-            if(player.firstname == name || player.lastname == name){
+            if(player.firstname.toUpperCase() == name || player.lastname.toUpperCase() == name){
                 return true;
             }
         })
